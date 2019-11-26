@@ -1,32 +1,74 @@
 body{
     background: slategray;
+    font-family: 'Didact Gothic', sans-serif
 }
 
-nav{
-    padding: 30px;
+.navbar{
+   background-color: black;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.title{
+    font-size: 42px;
+    color: white;
+    padding-top: 10px;
+    font-family: 'Fredoka One', cursive;
 }
 
 .list-group{
-    display: inline-flex;
+    display: flex;
     flex: row;
+    font-family: 'Fredoka One', cursive;
 }
-/* .col-sm-4{
-    margin-right: 15px;
-} */
+h1{
+    font-family: 'Fredoka One', cursive;
+
+}
+
+
+.icon-main{
+    width: 150px;
+    height: 150px;
+    background-color: slategrey;
+    border-radius: 50%;
+    border: solid;
+    border-color: slategrey;;
+}
+
+.icon{
+    width: 75px;
+    height: 75px;
+    background-color: slategrey;
+    border-radius: 50%;
+    border: solid;
+    border-color: slategrey;
+}
 
 .card{
     /* width: fit-content; */
-    width: auto;
+    height: 250px;
+    width: 200px;
+    align-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
 }
 
 .jumbotron{
-    padding-top: 20px;
+    padding: 25px 25px;
+    width: auto;
 }
 
 #searchBox{
     padding: 25px 15px 15px 15px;
+    width: max-content;
+    margin: none;
 }
 
 #searchButton{
     padding: 25px 15px 15px 15px;
+    margin: none
+    ;
 }

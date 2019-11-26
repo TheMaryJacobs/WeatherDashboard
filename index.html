@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Fredoka+One|Patrick+Hand|Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -14,130 +16,126 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark justify-content-center">
+    <nav class="navbar navbar-dark">
         <div class="navbar-brand">
-            <p class=h2>Weather Dashboard</p>
-            <div>
-                    <div class="row">
-                        <div class="col" id="searchBox">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                        </div>
-                        <div class="col" id="searchButton">
-                            <a href="#" class="btn btn-primary">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </div>
+            <div class="row">
+                <div class="col">
+                    <p class="title">Weather Dashboard</p>
+                </div>
+                <div class="col">
+                    <div id="searchBox">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search by City or Zip">
                     </div>
                 </div>
+                <div class="col">
+                    <div id="searchButton">
+                        <a href="#" class="btn btn-primary">
+                        <i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </nav>
 
     <nav class="navbar navbar-light bg-light">
             <form class="form-inline">
-                <ul class="list-group d-flex flex-row"></ul>
-              <!-- <button class="btn btn-outline-success" type="button">Main button</button>
-              <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button> -->
+                <ul class="list-group d-flex flex-row justify-content-center"></ul>
             </form>
     </nav>
 
-
-
-    <!-- <div>
-        <div class="row">
-            <div class="col-sm-2" id="searchBox">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search">
-            </div>
-            <div class="col-sm-1" id="searchButton">
-                <a href="#" class="btn btn-primary">
-                    <i class="fas fa-search"></i>
-                </a>
-            </div>
-        </div>
-    </div> -->
-        <!-- <div class="row"> -->
-            <!-- <div class="col-sm-3">
-                <ul class="list-group"></ul>
-            </div> -->
-            <div class="col">
+    <section>
                 <!-- -sm-8 -->
-                <div class="jumbotron m-5">
-                    <h1 class="city"> - - - </h1>
+        <div class="jumbotron m-5">
+            <div class="row">
+            <div class="col-8">
+                <h1 class="city"> - - - </h1>
                     <h2 id="todayIs" class=""></h2>
-                    <img id="icon"></img>
                     <h3 class="temp"></h3>
                     <h3 class="humidity"></h3>
                     <h3 class="windSpeed"></h3>
                     <h3 class="uvIndex"></h3>
-                    <hr class="my-4">
-                    <!-- <div class="row"> -->
-                </div>
+            </div>
+            <div class="col-4">
+                <br>
+                <h5 id="weather"></h5>
+                <br><br>
+                <img class="icon-main" id="icon"></img>
+            </div>
+                    <!-- <hr class="my-4"> -->
+            </div>
+        </div>
             
             <div class="jumbotron m-5">
                 <h1>Five Day Forcast</h1>
+                <hr>
                 <div class="row">
-                        <div class="col-sm-4">
-                            <div class="card" style="width: 180p;">
+                        <div class="col-auto">
+                            <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title" id="day-3"></h5>
                                     <h6 id="day-Two"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-3"></h6>
                                     <p class="card-text" id="humid-3"></p>
-                                    <img id="icon-3"></img>
+                                    <h5 id="weather-3"></h5>
+                                    <img class="icon" id="icon-3"></img>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card" style="width: 180p;">
+                        <div class="col-auto">
+                            <div class="card" >
                                 <div class="card-body">
                                     <h5 class="card-title" id="day-11"></h5>
                                     <h6 id="day-Three"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-11"></h6>
                                     <p class="card-text" id="humid-11"></p>
-                                    <img id="icon-11"></img>
+                                    <h5 id="weather-11"></h5>
+                                    <img class="icon" id="icon-11"></img>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="card" style="width: 180p;">
+                        <div class="col-auto">
+                            <div class="card" >
                                 <div class="card-body">
-                                    <h6 id="day-Four"></h6>
                                     <h5 class="card-title" id="day-19"></h5>
+                                    <h6 id="day-Four"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-19"></h6>
                                     <p class="card-text" id="humid-19"></p>
-                                    <img id="icon-19"></img>
+                                    <h5 id="weather-19"></h5>
+                                    <img class="icon" id="icon-19"></img>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card" style="width: 180p;">
+                        <div class="col-auto">
+                            <div class="card" >
                                 <div class="card-body">
                                     <h5 class="card-title" id="day-27"></h5>
                                     <h6 id="day-Five"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-27"></h6>
                                     <p class="card-text" id="humid-27"></p>
-                                    <img id="icon-27"></img>
+                                    <h5 id="weather-27"></h5>
+                                    <img class="icon" id="icon-27"></img>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card" style="width: 180p;">
+                        <div class="col-auto">
+                            <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title" day id="day-35"></h5>
                                     <h6 id="day-Six"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-35"></h6>
                                     <p class="card-text" id="humid-35"></p>
-                                    <img id="icon-35"></img>
+                                    <h5 id="weather-35"></h5>
+                                    <img class="icon" id="icon-35"></img>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
 
             <!-- </div> -->
-        </div>
+    </section>
 
     </div>
 

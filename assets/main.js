@@ -108,6 +108,7 @@ function currentCall() {
                         // const temp = Math.floor(+response.list[i].main.temp)
                         $("#temp-" + index).text("Temp: "+response.list[i].main.temp);
                         $("#humid-" + index).text("Humidity: "+response.list[i].main.humidity);
+                        // $("#weather-"+index).text(response.list.weather.description)
                         $("#icon-" + index).attr('src', iconURL);
                         index = index + 8;
                     }
