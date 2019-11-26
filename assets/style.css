@@ -1,0 +1,23 @@
+nav{
+    padding: 30px;
+}
+
+.col-sm-4{
+    margin-right: 15px;
+}
+
+.card{
+    width: fit-content;
+}
+
+.jumbotron{
+    padding-top: 20px;
+}
+
+#searchBox{
+    padding: 25px 15px 15px 15px;
+}
+
+#searchButton{
+    padding: 25px 15px 15px 15px;
+}
