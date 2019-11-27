@@ -6,7 +6,7 @@ body{
 .navbar{
    background-color: black;
    align-items: center;
-   justify-content: space-around;
+   /* justify-content: space-evenly; */
 }
 
 .title{
@@ -14,13 +14,20 @@ body{
     color: white;
     padding-top: 10px;
     font-family: 'Fredoka One', cursive;
+    /* align-items: left; */
 }
 
+.saved-cities{
+    background-color: slategrey;
+
+}
 .list-group{
     display: flex;
     flex: row;
     font-family: 'Fredoka One', cursive;
+    color: slategrey;
 }
+
 h1{
     font-family: 'Fredoka One', cursive;
 
@@ -63,7 +70,7 @@ h1{
 
 #searchBox{
     padding: 25px 15px 15px 15px;
-    width: max-content;
+    width: 400px;
     margin: none;
 }
 

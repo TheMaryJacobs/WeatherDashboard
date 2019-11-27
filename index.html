@@ -13,30 +13,31 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
-</head>
+</head> 
 
 <body>
     <nav class="navbar navbar-dark">
         <div class="navbar-brand">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col">
                     <p class="title">Weather Dashboard</p>
                 </div>
-                <div class="col">
-                    <div id="searchBox">
+                <!-- // the order of these matter to have currentCall function work -->
+                <div class="row justify-content-center">
+                    <div class="col" id="searchBox">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search by City or Zip">
                     </div>
-                </div>
-                <div class="col">
-                    <div id="searchButton">
+                    <div class="col" id="searchButton">
                         <a href="#" class="btn btn-primary">
-                        <i class="fas fa-search"></i></a>
+                            <i class="fas fa-search"></i>
+                        </a>
                     </div>
                 </div>
-                
+                <!-- $(this).parent("div").children("div").children("input").val(); -->
             </div>
         </div>
     </nav>
+   
 
     <nav class="navbar navbar-light bg-light">
             <form class="form-inline">
@@ -45,7 +46,6 @@
     </nav>
 
     <section>
-                <!-- -sm-8 -->
         <div class="jumbotron m-5">
             <div class="row">
             <div class="col-8">
@@ -62,7 +62,6 @@
                 <br><br>
                 <img class="icon-main" id="icon"></img>
             </div>
-                    <!-- <hr class="my-4"> -->
             </div>
         </div>
             
@@ -73,7 +72,7 @@
                         <div class="col-auto">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title" id="day-3"></h5>
+                                    <!-- <h5 class="card-title" id="day-3"></h5> -->
                                     <h6 id="day-Two"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-3"></h6>
                                     <p class="card-text" id="humid-3"></p>
@@ -85,7 +84,7 @@
                         <div class="col-auto">
                             <div class="card" >
                                 <div class="card-body">
-                                    <h5 class="card-title" id="day-11"></h5>
+                                    <!-- <h5 class="card-title" id="day-11"></h5> -->
                                     <h6 id="day-Three"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-11"></h6>
                                     <p class="card-text" id="humid-11"></p>
@@ -97,7 +96,7 @@
                         <div class="col-auto">
                             <div class="card" >
                                 <div class="card-body">
-                                    <h5 class="card-title" id="day-19"></h5>
+                                    <!-- <h5 class="card-title" id="day-19"></h5> -->
                                     <h6 id="day-Four"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-19"></h6>
                                     <p class="card-text" id="humid-19"></p>
@@ -109,7 +108,7 @@
                         <div class="col-auto">
                             <div class="card" >
                                 <div class="card-body">
-                                    <h5 class="card-title" id="day-27"></h5>
+                                    <!-- <h5 class="card-title" id="day-27"></h5> -->
                                     <h6 id="day-Five"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-27"></h6>
                                     <p class="card-text" id="humid-27"></p>
@@ -121,7 +120,7 @@
                         <div class="col-auto">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title" day id="day-35"></h5>
+                                    <!-- <h5 class="card-title" day id="day-35"></h5> -->
                                     <h6 id="day-Six"></h6>
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-35"></h6>
                                     <p class="card-text" id="humid-35"></p>
@@ -139,10 +138,9 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/main.js"></script>
 </body>
 
-</html>
+</html> -->
