@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/style.css">
 </head> 
 
-<body>
+<body class="background"> 
     <nav class="navbar navbar-dark">
         <div class="navbar-brand">
             <div class="row justify-content-center">
@@ -23,12 +23,12 @@
                     <p class="title">Weather Dashboard</p>
                 </div>
                 <!-- // the order of these matter to have currentCall function work -->
-                <div class="row justify-content-center">
+                <div class="row justify-content-right">
                     <div class="col" id="searchBox">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search by City or Zip">
                     </div>
                     <div class="col" id="searchButton">
-                        <a href="#" class="btn btn-primary">
+                        <a href="#" class="btn btn-md">
                             <i class="fas fa-search"></i>
                         </a>
                     </div>
@@ -38,18 +38,17 @@
         </div>
     </nav>
    
-
-    <nav class="navbar navbar-light bg-light">
-            <form class="form-inline">
+    <nav class="navbar nav2">
+            <form class="form-inline saved-cities">
                 <ul class="list-group d-flex flex-row justify-content-center"></ul>
             </form>
     </nav>
 
     <section>
-        <div class="jumbotron m-5">
+        <div class="jumbotron m-5 shadow">
             <div class="row">
             <div class="col-8">
-                <h1 class="city"> - - - </h1>
+                <h1 class="city"> Search by location above to see the current weather. </h1>
                     <h2 id="todayIs" class=""></h2>
                     <h3 class="temp"></h3>
                     <h3 class="humidity"></h3>
@@ -65,7 +64,7 @@
             </div>
         </div>
             
-            <div class="jumbotron m-5">
+            <div class="jumbotron m-5 shadow">
                 <h1>Five Day Forcast</h1>
                 <hr>
                 <div class="row">
@@ -77,6 +76,7 @@
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-3"></h6>
                                     <p class="card-text" id="humid-3"></p>
                                     <h5 id="weather-3"></h5>
+                                    <hr>
                                     <img class="icon" id="icon-3"></img>
                                 </div>
                             </div>
@@ -89,6 +89,7 @@
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-11"></h6>
                                     <p class="card-text" id="humid-11"></p>
                                     <h5 id="weather-11"></h5>
+                                    <hr>
                                     <img class="icon" id="icon-11"></img>
                                 </div>
                             </div>
@@ -101,6 +102,7 @@
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-19"></h6>
                                     <p class="card-text" id="humid-19"></p>
                                     <h5 id="weather-19"></h5>
+                                    <hr>
                                     <img class="icon" id="icon-19"></img>
                                 </div>
                             </div>
@@ -113,6 +115,7 @@
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-27"></h6>
                                     <p class="card-text" id="humid-27"></p>
                                     <h5 id="weather-27"></h5>
+                                    <hr>
                                     <img class="icon" id="icon-27"></img>
                                 </div>
                             </div>
@@ -125,6 +128,7 @@
                                     <h6 class="card-subtitle mb-2 text-muted" id="temp-35"></h6>
                                     <p class="card-text" id="humid-35"></p>
                                     <h5 id="weather-35"></h5>
+                                    <hr>
                                     <img class="icon" id="icon-35"></img>
                                 </div>
                             </div>

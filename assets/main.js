@@ -5,7 +5,7 @@ let cityArray = []
 const TodayIs = moment().format('MMMM Do , YYYY');
     $('#todayIs').text(TodayIs);
 
-const DayTwo = moment().add(1, 'days').calendar();
+const DayTwo = moment().add(1, 'days').calendar(); 
     $('#day-Two').text(DayTwo);
 
 const DayThree = moment().add(2, 'days').calendar();
@@ -20,14 +20,16 @@ const DayFive = moment().add(4, 'days').calendar();
 const DaySix = moment().add(5, 'days').calendar();
     $('#day-Six').text(DaySix); 
 
-$("#searchButton").on("click", function () {
-    city = $(this).parent("div").children("div").children("input").val();
-    $(this).parent("div").children("div").children("input").val("");
-    currentCall();
+
+
+    $("#searchButton").on("click", function () {
+        city = $(this).parent("div").children("div").children("input").val();
+        $(this).parent("div").children("div").children("input").val("");
+        currentCall();
 
     console.log(city);
 
-});
+    });
 
 storedCities = JSON.parse(localStorage.getItem("cities"));
 
@@ -62,22 +64,28 @@ function currentCall() {
     })
     //promise - call the api for the information
         .then(function (response) {
+            //make an array to save in local storage and appear in nav as buttons
             const $cityLi = $("<li>", { "class": "list-group-item" });
-            //used stack exchange to figure out icon image: https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon
+            //thank you stack overflow for icon help
             const iconCode = response.weather[0].icon;
             const iconURL = "http://openweathermap.org/img/wn/" + iconCode + ".png";
+
+            console.log(iconCode);
 
             cityObject = {
                 name: response.name
             }
 
+            
+
+            // turns the saved cities array into a string
             cityArray = JSON.parse(localStorage.getItem("cities"));
             if (cityArray === null) {
                 localStorage.setItem("cities", JSON.stringify([cityObject]));
             }
             else {
-
-                //not sure how exactly i got this working...
+        
+                //if you search a city twice, it scoots it to the end of button line 
                 function listCleaner() {
                     for (i = 0; i < cityArray.length; i++) {
                         if (cityArray[i].name === cityObject.name) {
@@ -91,19 +99,27 @@ function currentCall() {
             }       if (cityArray !== null){
                     listCleaner();}
 
+            
             city = {name: response.name}
-
+                // change inner text of current weather card
             cityLat = response.coord.lat;
             cityLong = response.coord.lon;
             cityId = response.id;
             $(".city").text(response.name);
-            $(".temp").text("Temp: " + response.main.temp);
+            $(".temp").text("Temp: " + response.main.temp + "°");
             $(".humidity").text("Humidity: " + response.main.humidity);
             $(".windSpeed").text("Wind: " + response.wind.speed);
             $("#icon").attr('src', iconURL);
            
-
-            
+                // -------------------------------------------------------
+            // change page background gradient based on current weather conditions
+        
+            weatherEl = response.weather[0].main;
+            console.log(weatherEl);
+            function backgroundChange (){
+                const background = document.getElementById("background").
+                element.classList.add("-"+[weatherEl])
+            }
 
 
             const uviURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${cityLat}&lon=${cityLong}&units=imperial`;
@@ -113,9 +129,6 @@ function currentCall() {
             })
                 .then(function (response) {
                     $(".uvIndex").text("UVI: "+response.value);
-                    // let $dateHeader = $("<h2>");
-                    // let $dateHeader = $("<h2>");
-                    // let shortDate = response.date_iso.substr(0, response.date_iso.indexOf('T'));
                 })
 
 
@@ -126,6 +139,7 @@ function currentCall() {
                 url: fiveDayURL,
                 method: "GET",
             })
+             // change inner text of five day forcast cards
                 .then(function (response) {
                     for (let i = 4; i < response.list.length; i += 8) {
                         const iconCode = response.list[i].weather[0].icon;
@@ -135,15 +149,17 @@ function currentCall() {
                         // const shortDate = response.list[i].dt_txt.substr(0, response.list[i].dt_txt.indexOf(' '));
                         // $("#day-" + index).text(shortDate);
                         // const temp = Math.floor(+response.list[i].main.temp)
-                        $("#temp-" + index).text("Temp: "+response.list[i].main.temp);
+                        $("#temp-" + index).text("Temperature: "+response.list[i].main.temp + "°");
                         $("#humid-" + index).text("Humidity: "+response.list[i].main.humidity);
                         $("#icon-" + index).attr('src', iconURL);
                         index = index + 8;
                     }
                 })
         })
+
 };
 $(document).on("click", "li", function () {
     city = $(this).text();
     currentCall();
+
 });

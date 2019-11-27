@@ -3,11 +3,14 @@ body{
     font-family: 'Didact Gothic', sans-serif
 }
 
-body{
-    background: rgb(255,199,2);
-    background: linear-gradient(90deg, rgba(255,199,2,1) 0%, rgba(20,212,255,1) 38%, rgba(48,155,255,1) 97%);
+.background{
+    background: rgb(112,128,144);
+    background: linear-gradient(0deg, rgba(112,128,144,1) 0%, rgba(255,255,255,1) 100%, rgba(146,229,255,1) 100%);
 }
-
+/* body{
+background: rgb(184,185,207);
+background: linear-gradient(90deg, rgba(184,185,207,1) 0%, rgba(255,255,255,1) 44%, rgba(146,229,255,1) 97%);
+} */
 
 .navbar{
    background-color: slategrey;
@@ -24,20 +27,30 @@ body{
     /* align-items: left; */
 }
 
-.saved-cities{
-    background-color: slategrey;
-
+.nav2{
+    background-color: #DA5C34;
+}
+li{
+    background-color: white;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    align-items: center;
+    margin: 5px;
 }
 .list-group{
     display: flex;
     flex: row;
     font-family: 'Fredoka One', cursive;
-    color: slategrey;
+    color:  #DA5C34;
+    flex-wrap: wrap;
+    margin: 2px;
 }
 
 h1{
     font-family: 'Fredoka One', cursive;
-
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 
@@ -53,10 +66,10 @@ h1{
 .icon{
     width: 75px;
     height: 75px;
-    background-color: slategrey;
+    background-color: rgb(172, 172, 172);
     border-radius: 50%;
     border: solid;
-    border-color: slategrey;
+    border-color: #DA5C34;
 }
 
 .card{
@@ -73,6 +86,7 @@ h1{
 .jumbotron{
     padding: 25px 25px;
     width: auto;
+    background-color: rgba(255, 255, 255, 0.781);
 }
 
 #searchBox{
@@ -81,8 +95,8 @@ h1{
     margin: none;
 }
 
-#searchButton{
-    padding: 25px 15px 15px 15px;
-    margin: none
-    ;
+.btn{
+    background-color: #DA5C34;
+    /* padding: 25px 15px 15px 15px; */
+    margin-top: 25px;
 }
