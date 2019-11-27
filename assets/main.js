@@ -38,6 +38,7 @@ if (storedCities !== null) {
 };
 
 
+
 function renderList() {
     Object.values(storedCities).forEach((value) => {
         const $cityLi = $("<li>", { "class": "list-group-item" });
@@ -69,6 +70,27 @@ function currentCall() {
             cityObject = {
                 name: response.name
             }
+
+            cityArray = JSON.parse(localStorage.getItem("cities"));
+            if (cityArray === null) {
+                localStorage.setItem("cities", JSON.stringify([cityObject]));
+            }
+            else {
+
+                //not sure how exactly i got this working...
+                function listCleaner() {
+                    for (i = 0; i < cityArray.length; i++) {
+                        if (cityArray[i].name === cityObject.name) {
+                            removedCity = cityArray.splice([i], 1);
+                        };
+                    }
+                    cityArray.unshift(cityObject);
+
+                    localStorage.setItem("cities", JSON.stringify(cityArray));
+                }
+            }       if (cityArray !== null){
+                    listCleaner();}
+
             city = {name: response.name}
 
             cityLat = response.coord.lat;
@@ -80,6 +102,10 @@ function currentCall() {
             $(".windSpeed").text("Wind: " + response.wind.speed);
             $("#icon").attr('src', iconURL);
            
+
+            
+
+
             const uviURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${cityLat}&lon=${cityLong}&units=imperial`;
             $.ajax({
                 url: uviURL,
@@ -89,12 +115,7 @@ function currentCall() {
                     $(".uvIndex").text("UVI: "+response.value);
                     // let $dateHeader = $("<h2>");
                     // let $dateHeader = $("<h2>");
-                    let shortDate = response.date_iso.substr(0, response.date_iso.indexOf('T'));
-                    // $dateHeader.text(shortDate);
-                    // $("h1").append($dateHeader);
-                    // "https://openweathermap.desk.com/customer/portal/questions/17064492-date-and-time-specific-response?t=535697"
-                    // $dateHeader.text(shortDate);
-                    // $("h1").append($dateHeader);
+                    // let shortDate = response.date_iso.substr(0, response.date_iso.indexOf('T'));
                 })
 
 

@@ -3,8 +3,15 @@ body{
     font-family: 'Didact Gothic', sans-serif
 }
 
+body{
+    background: rgb(255,199,2);
+    background: linear-gradient(90deg, rgba(255,199,2,1) 0%, rgba(20,212,255,1) 38%, rgba(48,155,255,1) 97%);
+}
+
+
 .navbar{
-   background-color: black;
+   background-color: slategrey;
+   background-blend-mode: overlay;
    align-items: center;
    /* justify-content: space-evenly; */
 }
