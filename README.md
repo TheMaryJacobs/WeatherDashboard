@@ -12,8 +12,10 @@ Helpful for planning commutes, travel details, and packing lists for the upcomin
 
 ### Screenshots
 
-
-
+![image](https://github.com/TheMaryJacobs/WeatherDashboard/blob/master/assets/screenshots/Screenshot1.png?raw=true)
+![image](https://github.com/TheMaryJacobs/WeatherDashboard/blob/master/assets/screenshots/Screenshot2.png?raw=true)
+![image](https://github.com/TheMaryJacobs/WeatherDashboard/blob/master/assets/screenshots/Screenshot3.png?raw=true)
+![image](https://github.com/TheMaryJacobs/WeatherDashboard/blob/master/assets/screenshots/Screenshot4.png?raw=true)
 
 
 ## Resources
