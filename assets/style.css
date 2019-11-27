@@ -7,10 +7,6 @@ body{
     background: rgb(112,128,144);
     background: linear-gradient(0deg, rgba(112,128,144,1) 0%, rgba(255,255,255,1) 100%, rgba(146,229,255,1) 100%);
 }
-/* body{
-background: rgb(184,185,207);
-background: linear-gradient(90deg, rgba(184,185,207,1) 0%, rgba(255,255,255,1) 44%, rgba(146,229,255,1) 97%);
-} */
 
 .navbar{
    background-color: slategrey;
@@ -20,15 +16,16 @@ background: linear-gradient(90deg, rgba(184,185,207,1) 0%, rgba(255,255,255,1) 4
 }
 
 .title{
-    font-size: 42px;
+    font-size: 56px;
     color: white;
     padding-top: 10px;
-    font-family: 'Fredoka One', cursive;
-    /* align-items: left; */
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .nav2{
-    background-color: #DA5C34;
+    background-color: rgba(218, 91, 52, 0.81);
 }
 li{
     background-color: white;
@@ -38,21 +35,43 @@ li{
     align-items: center;
     margin: 5px;
 }
+
+li:hover{
+    background-color:rgb(192, 201, 209);
+}
 .list-group{
     display: flex;
-    flex: row;
-    font-family: 'Fredoka One', cursive;
+    flex: row-reverse;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
     color:  #DA5C34;
     flex-wrap: wrap;
     margin: 2px;
 }
-
+/* .jumbotron headers */
 h1{
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
+/* current weather info */
+h3{color: slategrey;
+text-transform: uppercase;
+}
+
+/* five day dates */
+h5{
+font-size: 24px;
+font-family: 'Bebas Neue', sans-serif;
+color: #DA5C34;
+}
+
+h6{
+font-size: 18px;
+
+}
 
 .icon-main{
     width: 150px;
@@ -66,7 +85,7 @@ h1{
 .icon{
     width: 75px;
     height: 75px;
-    background-color: rgb(172, 172, 172);
+    background-color: slategrey;
     border-radius: 50%;
     border: solid;
     border-color: #DA5C34;
@@ -75,13 +94,14 @@ h1{
 .card{
     /* width: fit-content; */
     height: 250px;
-    width: 200px;
+    width: 225px;
     align-content: center;
     margin: auto;
     margin-bottom: 20px;
     text-align: center;
     justify-content: center;
 }
+@media 
 
 .jumbotron{
     padding: 25px 25px;
@@ -90,13 +110,15 @@ h1{
 }
 
 #searchBox{
-    padding: 25px 15px 15px 15px;
+    padding: 30px 15px 15px 15px;
     width: 400px;
     margin: none;
+    height: 56px;
 }
 
 .btn{
     background-color: #DA5C34;
-    /* padding: 25px 15px 15px 15px; */
-    margin-top: 25px;
+    /* padding: 30px 15px 15px 15px; */
+    margin-top: 30px;
+    /* height: 56px; */
 }

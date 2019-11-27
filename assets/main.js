@@ -6,19 +6,19 @@ const TodayIs = moment().format('MMMM Do , YYYY');
     $('#todayIs').text(TodayIs);
 
 const DayTwo = moment().add(1, 'days').calendar(); 
-    $('#day-Two').text(DayTwo);
+    $('#day-Two').text(DayTwo.slice(0,8));
 
 const DayThree = moment().add(2, 'days').calendar();
-    $('#day-Three').text(DayThree);
+    $('#day-Three').text(DayThree.slice(0,8));
 
 const DayFour = moment().add(3, 'days').calendar();
-    $('#day-Four').text(DayFour);
+    $('#day-Four').text(DayFour.slice(0,8));
 
 const DayFive = moment().add(4, 'days').calendar();
-    $('#day-Five').text(DayFive);
+    $('#day-Five').text(DayFive.slice(0,8));
 
 const DaySix = moment().add(5, 'days').calendar();
-    $('#day-Six').text(DaySix); 
+    $('#day-Six').text(DaySix.slice(0,8)); 
 
 
 
@@ -106,9 +106,9 @@ function currentCall() {
             cityLong = response.coord.lon;
             cityId = response.id;
             $(".city").text(response.name);
-            $(".temp").text("Temp: " + response.main.temp + "°");
-            $(".humidity").text("Humidity: " + response.main.humidity);
-            $(".windSpeed").text("Wind: " + response.wind.speed);
+            $(".temp").text("Temperature  :  " + response.main.temp + "°");
+            $(".humidity").text("Humidity  :  " + response.main.humidity + "%");
+            $(".windSpeed").text("Wind Speed  :  " + response.wind.speed + "mph");
             $("#icon").attr('src', iconURL);
            
                 // -------------------------------------------------------
@@ -128,7 +128,7 @@ function currentCall() {
                 method: "GET",
             })
                 .then(function (response) {
-                    $(".uvIndex").text("UVI: "+response.value);
+                    $(".uvIndex").text("UV Index  : "+response.value);
                 })
 
 
@@ -149,8 +149,8 @@ function currentCall() {
                         // const shortDate = response.list[i].dt_txt.substr(0, response.list[i].dt_txt.indexOf(' '));
                         // $("#day-" + index).text(shortDate);
                         // const temp = Math.floor(+response.list[i].main.temp)
-                        $("#temp-" + index).text("Temperature: "+response.list[i].main.temp + "°");
-                        $("#humid-" + index).text("Humidity: "+response.list[i].main.humidity);
+                        $("#temp-" + index).text("Temperature:  "+response.list[i].main.temp + "°");
+                        $("#humid-" + index).text("Humidity:  "+response.list[i].main.humidity + "%");
                         $("#icon-" + index).attr('src', iconURL);
                         index = index + 8;
                     }
