@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
     
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Didact+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="assets/style.css">
 </head> 
 
-<body class="background"> 
-    <nav class="navbar navbar-dark">
+<body> 
+    <nav class="navbar navbar-dark navbar-expand">
         <div class="navbar-brand">
             <div class="row justify-content-center">
                 <div class="col">
@@ -37,15 +37,15 @@
             </div>
         </div>
     </nav>
-   
+   <!-- saved cities buttons -->
     <nav class="navbar nav2 d-flex flex-row-reverse">
             <form class="form-inline saved-cities d-flex flex-row-reverse">
                 <ul class="list-group d-flex flex-row-reverse"></ul>
             </form>
     </nav>
 
-    <section>
-        <div class="jumbotron m-5 shadow">
+    <div class="container container-fluid">
+        <div class="jumbotron jumbotron-fluid shadow">
             <div class="row">
             <div class="col-8">
                 <h1 class="city"> Search by location above to see the current weather. </h1>
@@ -64,8 +64,8 @@
             </div>
         </div>
             
-            <div class="jumbotron m-5 shadow">
-                <h1>Five Day Forcast</h1>
+            <div class="jumbotron jumbotron-fluid shadow">
+                <h1>Five Day Forecast</h1>
                 <hr>
                 <div class="row justify-content-center">
                         <div class="col-auto">
@@ -129,7 +129,7 @@
                         </div>
                 </div>
             </div>
-    </section>
+    </div>
 
     </div>
 
