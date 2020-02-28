@@ -6,19 +6,19 @@ const TodayIs = moment().format('MMMM Do , YYYY');
     $('#todayIs').text(TodayIs);
 
 const DayTwo = moment().add(1, 'days').calendar(); 
-    $('#day-Two').text(DayTwo);
+    $('#day-Two').text(DayTwo.slice(0,8));
 
 const DayThree = moment().add(2, 'days').calendar();
-    $('#day-Three').text(DayThree);
+    $('#day-Three').text(DayThree.slice(0,8));
 
 const DayFour = moment().add(3, 'days').calendar();
-    $('#day-Four').text(DayFour);
+    $('#day-Four').text(DayFour.slice(0,8));
 
 const DayFive = moment().add(4, 'days').calendar();
-    $('#day-Five').text(DayFive);
+    $('#day-Five').text(DayFive.slice(0,8));
 
 const DaySix = moment().add(5, 'days').calendar();
-    $('#day-Six').text(DaySix); 
+    $('#day-Six').text(DaySix.slice(0,8)); 
 
 
 
@@ -38,14 +38,14 @@ if (storedCities !== null) {
     city = storedCities[0].name;
     window.onload = currentCall(city);
 };
-
+console.log(storedCities);
 
 
 function renderList() {
     Object.values(storedCities).forEach((value) => {
-        const $cityLi = $("<li>", { "class": "ingredients-list-item" });
+        const $cityLi = $("<li>", { "class": "list-group-item" });
         $cityLi.text(value.name);
-        $(".ingredients-list").prepend($cityLi);
+        $(".list-group").prepend($cityLi);
     }
     )
 }
@@ -70,12 +70,12 @@ function currentCall() {
             const iconCode = response.weather[0].icon;
             const iconURL = "http://openweathermap.org/img/wn/" + iconCode + ".png";
 
-            console.log(iconCode);
+            // console.log(iconCode);
 
             cityObject = {
                 name: response.name
             }
-
+            // console.log(cityArray)
             
 
             // turns the saved cities array into a string
@@ -116,10 +116,10 @@ function currentCall() {
         
             weatherEl = response.weather[0].main;
             console.log(weatherEl);
-            function backgroundChange (){
-                const background = document.getElementById("background").
-                element.classList.add("-"+[weatherEl])
-            }
+            // function backgroundChange (){
+            //     const background = document.getElementById("background").
+            //     element.classList.add("-"+[weatherEl])
+            // }
 
 
             const uviURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${cityLat}&lon=${cityLong}&units=imperial`;
