@@ -16,14 +16,14 @@
 </head> 
 
 <body> 
-    <nav class="navbar navbar-dark navbar-expand">
+    <nav class="navbar navbar-expand">
         <div class="navbar-brand">
             <div class="row justify-content-center">
                 <div class="col">
                     <p class="title">Weather Dashboard</p>
                 </div>
                 <!-- // the order of these matter to have currentCall function work -->
-                <div class="row">
+                <!-- <div class="row"> -->
                     <div class="col" id="searchBox">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search by City or Zip">
                     </div>
@@ -32,7 +32,7 @@
                             <i class="fas fa-search"></i>
                         </a>
                     </div>
-                </div>
+                <!-- </div> -->
                 <!-- $(this).parent("div").children("div").children("input").val(); -->
             </div>
         </div>
@@ -67,9 +67,9 @@
             <div class="jumbotron jumbotron-fluid shadow">
                 <h1>Five Day Forecast</h1>
                 <hr>
-                <div class="d-flex flex-wrap justify-content-center">
-                        <div class="col-lg-2 col-md-12">
-                            <div class="card">
+                <div class="forecast">
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card shadow">
                                 <div class="card-body">
                                     <h5 id="day-Two"></h5>
                                     <h6 class="card-subtitle mb-2" id="temp-3"></h6>
@@ -79,8 +79,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-12">
-                            <div class="card" >
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card shadow" >
                                 <div class="card-body">
                                     <h5 id="day-Three"></h5>
                                     <h6 class="card-subtitle mb-2" id="temp-11"></h6>
@@ -91,8 +91,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-12">
-                            <div class="card" >
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card shadow" >
                                 <div class="card-body">
                                     <h5 id="day-Four"></h5>
                                     <h6 class="card-subtitle mb-2" id="temp-19"></h6>
@@ -103,8 +103,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-12">
-                            <div class="card" >
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card shadow" >
                                 <div class="card-body">
                                     <h5 id="day-Five"></h5>
                                     <h6 class="card-subtitle mb-2" id="temp-27"></h6>
@@ -115,8 +115,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-12">
-                            <div class="card">
+                        <div class="col-lg-2 col-md-6">
+                            <div class="card shadow">
                                 <div class="card-body">
                                     <h5 id="day-Six"></h5>
                                     <h6 class="card-subtitle m-2" id="temp-35"></h6>

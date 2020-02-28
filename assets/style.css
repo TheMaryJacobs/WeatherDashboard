@@ -57,6 +57,7 @@ li{
 
 li:hover{
     background-color:rgb(192, 201, 209);
+    color: white;
 }
 .list-group{
     display: flex;
@@ -111,17 +112,21 @@ font-size: 18px;
 }
 
 .card{
-    /* width: fit-content; */
-    /* height: 250px;
-    width: 190px;
+    width: fit-content;
+    height: 100%;
     align-content: center;
-    margin: auto;
+    margin: 2px;
+    padding: 15px;
     border-radius: 5px;
-    margin-bottom: 20px;
     text-align: center;
-    justify-content: center; */
+    justify-content: center; 
 }
 
+.forecast{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .jumbotron{
     padding: 25px 25px;
     /* width: 95%; */
@@ -129,10 +134,14 @@ font-size: 18px;
     background-color: rgba(255, 255, 255, 0.781);
 }
 
+/* .forcast{
+    margin:none;
+
+} */
 
 #searchBox{
     padding: 30px 15px 15px 15px;
-    width: 400px;
+    width: fit-content;
     margin: none;
     height: 56px;
 }
