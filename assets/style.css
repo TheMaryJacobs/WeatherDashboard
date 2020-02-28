@@ -9,12 +9,21 @@ background: linear-gradient(0deg, rgba(112,128,144,1) 0%, rgba(255,255,255,1) 49
 .container{
     margin-top:  15px;
     padding: 5px;
+    width: 90%;
 }
 
-@media (min-width: 576px)
+/* @media (max-width: 576px){
 .container {
     max-width: 550px;
 }
+h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+} */
+
 
 .navbar{
    background-color: slategrey;
@@ -40,7 +49,7 @@ background: linear-gradient(0deg, rgba(112,128,144,1) 0%, rgba(255,255,255,1) 49
 li{
     background-color: white;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
     align-items: center;
     margin: 5px;
@@ -73,7 +82,7 @@ text-transform: uppercase;
 
 /* five day dates */
 h5{
-font-size: 24px;
+font-size: 22px;
 font-family: 'Bebas Neue', sans-serif;
 color: #DA5C34;
 }
@@ -103,20 +112,20 @@ font-size: 18px;
 
 .card{
     /* width: fit-content; */
-    height: 250px;
-    width: 225px;
+    /* height: 250px;
+    width: 190px;
     align-content: center;
     margin: auto;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-bottom: 20px;
     text-align: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .jumbotron{
     padding: 25px 25px;
     /* width: 95%; */
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.781);
 }
 
@@ -132,5 +141,6 @@ font-size: 18px;
     background-color: #DA5C34;
     /* padding: 30px 15px 15px 15px; */
     margin-top: 30px;
+    margin-left: -10px;
     /* height: 56px; */
 }

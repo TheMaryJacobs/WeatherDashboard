@@ -6,19 +6,19 @@ const TodayIs = moment().format('MMMM Do , YYYY');
     $('#todayIs').text(TodayIs);
 
 const DayTwo = moment().add(1, 'days').calendar(); 
-    $('#day-Two').text(DayTwo.slice(0,8));
+    $('#day-Two').text(DayTwo);
 
 const DayThree = moment().add(2, 'days').calendar();
-    $('#day-Three').text(DayThree.slice(0,8));
+    $('#day-Three').text(DayThree);
 
 const DayFour = moment().add(3, 'days').calendar();
-    $('#day-Four').text(DayFour.slice(0,8));
+    $('#day-Four').text(DayFour);
 
 const DayFive = moment().add(4, 'days').calendar();
-    $('#day-Five').text(DayFive.slice(0,8));
+    $('#day-Five').text(DayFive);
 
 const DaySix = moment().add(5, 'days').calendar();
-    $('#day-Six').text(DaySix.slice(0,8)); 
+    $('#day-Six').text(DaySix); 
 
 
 
@@ -43,9 +43,9 @@ if (storedCities !== null) {
 
 function renderList() {
     Object.values(storedCities).forEach((value) => {
-        const $cityLi = $("<li>", { "class": "list-group-item" });
+        const $cityLi = $("<li>", { "class": "ingredients-list-item" });
         $cityLi.text(value.name);
-        $(".list-group").prepend($cityLi);
+        $(".ingredients-list").prepend($cityLi);
     }
     )
 }
