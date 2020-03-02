@@ -28,8 +28,9 @@ const DaySix = moment().add(5, 'days').calendar();
         currentCall();
 
     console.log(city);
-
+    
     });
+
 
 storedCities = JSON.parse(localStorage.getItem("cities"));
 
@@ -46,9 +47,11 @@ function renderList() {
         const $cityLi = $("<li>", { "class": "list-group-item" });
         $cityLi.text(value.name);
         $(".list-group").prepend($cityLi);
+        $("#refresh").hide();  
     }
-    )
+    ) 
 }
+
 
 if (storedCities !== null) {
     renderList();
